@@ -99,16 +99,17 @@ public class GeneratorService implements IGeneratorService {
 
                         if (isInvoiceValueZero(invoiceValue))
                             listInvoicesWithValueZero.add(newInvoice);
+                        else {
+                            if (isNumberPageLessThanOrEqualToSix(numberOfPages)) {
+                                listInvoicesWithNumberPageLessThanOrEqualToSix.add(newInvoice);
 
-                        if (isNumberPageLessThanOrEqualToSix(numberOfPages)) {
-                            listInvoicesWithNumberPageLessThanOrEqualToSix.add(newInvoice);
-
-                            listInvoicesWithNumberPageLessThanOrEqualToTwelve.add(newInvoice);
+                                listInvoicesWithNumberPageLessThanOrEqualToTwelve.add(newInvoice);
+                            }
+                            else if (isNumberPageLessThanOrEqualToTwelve(numberOfPages))
+                                listInvoicesWithNumberPageLessThanOrEqualToTwelve.add(newInvoice);
+                            else
+                                listInvoicesWithNumberPageGreaterThanTwelve.add(newInvoice);
                         }
-                        else if (isNumberPageLessThanOrEqualToTwelve(numberOfPages))
-                            listInvoicesWithNumberPageLessThanOrEqualToTwelve.add(newInvoice);
-                        else
-                            listInvoicesWithNumberPageGreaterThanTwelve.add(newInvoice);
                     }
                 }
 
