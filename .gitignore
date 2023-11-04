@@ -1,5 +1,5 @@
-HELP.md
 spring-shell.log
+HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
