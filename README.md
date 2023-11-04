@@ -5,7 +5,7 @@
 ## Descrição do projeto
 O projeto consiste em um serviço CLI (Command-Line Interface, ou Interface de Linha de Comando) para administrar faturas de clientes fictícios, desenvolvido em Spring Shell, com a linguagem de programação Java. Tal aplicação objetiva prover um meio de gerar arquivos de saída, em formato CSV, a partir em um arquivo de entrada, em formato TXT, que simula dados de faturas.<br/>
 
-🚀 **Sobre as tecnologias utilizadas:**
+### 🚀 **Sobre as tecnologias utilizadas**
 
 Para a implementação do sistema, uma linguagem de programação foi selecionada. Abaixo estão os critérios utilizados para isto: 
 1. A linguagem deve ser uma das mais usadas no mercado;
