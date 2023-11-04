@@ -51,6 +51,7 @@ Por fim, o framework selecionado foi o Spring, que possui suporte ao Shell, por 
   <li><a href="#índice">Índice</a></li>
   <li><a href="#recursos">Recursos</a></li>
   <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+  <li><a href="#executando-a-aplicação">Executando a aplicação</a></li>
   <li><a href="#tecnologias">Tecnologias</a></li>
   <li><a href="#autora">Autora</a></li>
 </ul> 
@@ -70,7 +71,11 @@ Você deve ter as seguintes ferramentas instaladas em sua máquina:
 - O [Git](https://git-scm.com/downloads), para obter o projeto;
 - Uma IDE, como a [IntelliJ IDEA](https://www.jetbrains.com/idea/), para executar o sistema.
 
-### ▶️ Executando a aplicação
+---
+
+## Executando a aplicação
+**Demonstração em vídeo de como obter e executar a aplicação:** ▶️ [YouTube](https://youtu.be/A663Tldy9ao)
+
 - Em sua máquina, abra o Git Bash, entre na pasta a qual o projeto deve ficar, e digite o comando abaixo:
 
 ```bash
