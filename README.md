@@ -77,12 +77,12 @@ Você deve ter as seguintes ferramentas instaladas em sua máquina:
 $ git clone https://github.com/AndressaCarvalho/InvoiceManager.git
 ```
 
-- Abra o projeto baixado em a sua IDE de escolha.
+- Abra o projeto baixado em a sua IDE de escolha, e aguarde até que este seja completamente carregado.
 - Por meio da IDE, execute a aplicação.
 - No terminal Shell interativo, digite o comando ***generate***, seguido do caminho absoluto do arquivo TXT de origem, como no exemplo abaixo:
 
 ```bash
-shell:> generate C:/Users/Computer/Desktop/file_base.txt
+shell:>generate C:/Users/Computer/Desktop/file_base.txt
 ```
 
 - Aguarde até que o arquivo seja processado.
