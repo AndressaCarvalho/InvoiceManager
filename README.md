@@ -8,16 +8,16 @@ O projeto consiste em um serviço CLI (Command-Line Interface, ou Interface de L
 ### 🚀 **Sobre as tecnologias utilizadas**
 
 Para a implementação do sistema, uma linguagem de programação foi selecionada. Abaixo estão os critérios utilizados para isto: 
-1. A linguagem deve ser uma das mais usadas no mercado;
-2. A linguagem deve ser comumente utilizada para desenvolver aplicações em linha de comando;
-3. A linguagem deve ser de amplo conhecimento pelo desenvolvedor, a fim de agilizar o tempo de desenvolvimento da aplicação.
+- A linguagem deve ser uma das mais usadas no mercado;
+- A linguagem deve ser comumente utilizada para desenvolver aplicações em linha de comando;
+- A linguagem deve ser de amplo conhecimento pelo desenvolvedor, a fim de agilizar o tempo de desenvolvimento da aplicação.
 
 Assim, dentre as linguagens de programação que atendem os dois primeiros requisitos, sendo estas Java, Python, C e C++, a escolhida foi Java, a qual o desenvolvedor possui mais familiaridade.
 
 Após a escolha da linguagem, a próxima etapa foi a seleção de um framework, para que o projeto fosse devidamente estruturado. Isto foi feito através dos critérios: 
-1. O framework deve ser um dos mais utilizados para Java no mercado;
-2. O framework deve ter suporte ao Shell (frequentemente usado em conjunto com o CLI), para que o usuário possa interajir com o sistema operacional, por meio de comandos de texto interpretados por este.
-3. O framework deve ser conhecido pelo desenvolvedor, para agilizar o tempo de desenvolvimento da aplicação.
+- O framework deve ser um dos mais utilizados para Java no mercado;
+- O framework deve ter suporte ao Shell (frequentemente usado em conjunto com o CLI), para que o usuário possa interajir com o sistema operacional, por meio de comandos de texto interpretados por este.
+- O framework deve ser conhecido pelo desenvolvedor, para agilizar o tempo de desenvolvimento da aplicação.
 
 Por fim, o framework selecionado foi o Spring, que possui suporte ao Shell, por meio do Spring Shell.
 
@@ -76,22 +76,22 @@ Você deve ter as seguintes ferramentas instaladas em sua máquina:
 ## Executando a aplicação
 **Demonstração em vídeo de como obter e executar a aplicação:** ▶️ [YouTube](https://youtu.be/A663Tldy9ao)
 
-- Em sua máquina, abra o Git Bash, entre na pasta a qual o projeto deve ficar, e digite o comando abaixo:
+1. Em sua máquina, abra o Git Bash, entre na pasta a qual o projeto deve ficar, e digite o comando abaixo:
 
 ```bash
 $ git clone https://github.com/AndressaCarvalho/InvoiceManager.git
 ```
 
-- Abra o projeto baixado em a sua IDE de escolha, e aguarde até que este seja completamente carregado.
-- Por meio da IDE, execute a aplicação.
-- No terminal Shell interativo, digite o comando ***generate***, seguido do caminho absoluto do arquivo TXT de origem, como no exemplo abaixo:
+2. Abra o projeto baixado em a sua IDE de escolha, e aguarde até que este seja completamente carregado.
+3. Por meio da IDE, execute a aplicação.
+4. No terminal Shell interativo, digite o comando ***generate***, seguido do caminho absoluto do arquivo TXT de origem, como no exemplo abaixo:
 
 ```bash
 shell:>generate C:/Users/Computer/Desktop/file_base.txt
 ```
 
-- Aguarde até que o arquivo seja processado.
-- Ao fim do processo, se forem encontrados dados a serem separados, o sistema informará o caminho para o(s) arquivo(s) CSV gerado(s).
+5. Aguarde até que o arquivo seja processado.
+6. Ao fim do processo, se forem encontrados dados a serem separados, o sistema informará o caminho para o(s) arquivo(s) CSV gerado(s).
 
 ---
 
