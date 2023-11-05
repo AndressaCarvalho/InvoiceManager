@@ -41,16 +41,20 @@ public class GeneratorService implements IGeneratorService {
         try {
             clearInvoicesLists();
 
-            if (filterDataFromSourceFile(sourceFilePath)) {
-                if (createFileDirectory()) {
-                    generateFileByType();
-                    resultMessage = fileMessageConfiguration.getFilesGeneratedSuccess() + fileDirectory;
+            if (isSourceFileInCorrectFormat(sourceFilePath)) {
+                if (filterDataFromSourceFile(sourceFilePath)) {
+                    if (createFileDirectory()) {
+                        generateFileByType();
+                        resultMessage = fileMessageConfiguration.getFilesGeneratedSuccess() + fileDirectory;
+                    }
+                    else
+                        resultMessage = fileMessageConfiguration.getFilesCreateDirError();
                 }
                 else
-                    resultMessage = fileMessageConfiguration.getFilesCreateDirError();
+                    resultMessage = fileMessageConfiguration.getFilesNoDataFound();
             }
             else
-                resultMessage = fileMessageConfiguration.getFilesNoDataFound();
+                resultMessage = fileMessageConfiguration.getFilesWrongFormat();
         }
         catch (Exception e) {
             System.out.println(generalMessageConfiguration.getMessagesDefaultError() + e);
@@ -65,6 +69,10 @@ public class GeneratorService implements IGeneratorService {
         listInvoicesWithNumberPageLessThanOrEqualToSix.clear();
         listInvoicesWithNumberPageLessThanOrEqualToTwelve.clear();
         listInvoicesWithNumberPageGreaterThanTwelve.clear();
+    }
+
+    private Boolean isSourceFileInCorrectFormat(String sourceFilePath) {
+        return sourceFilePath.endsWith(".txt");
     }
 
     private Boolean filterDataFromSourceFile(String sourceFilePath) throws Exception {

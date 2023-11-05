@@ -104,20 +104,13 @@ public class FileConfiguration {
     @Configuration
     @ConfigurationProperties(prefix = "file.msg")
     public static class MessageProperties {
-        private String filesCurrentRow;
         private String filesWaitGenerated;
+        private String filesWrongFormat;
+        private String filesCurrentRow;
         private String filesGeneratedSuccess;
         private String filesGeneratedError;
         private String filesNoDataFound;
         private String filesCreateDirError;
-
-        public String getFilesCurrentRow() {
-            return filesCurrentRow;
-        }
-
-        public void setFilesCurrentRow(String filesCurrentRow) {
-            this.filesCurrentRow = filesCurrentRow;
-        }
 
         public String getFilesWaitGenerated() {
             return filesWaitGenerated;
@@ -125,6 +118,22 @@ public class FileConfiguration {
 
         public void setFilesWaitGenerated(String filesWaitGenerated) {
             this.filesWaitGenerated = filesWaitGenerated;
+        }
+
+        public String getFilesWrongFormat() {
+            return filesWrongFormat;
+        }
+
+        public void setFilesWrongFormat(String filesWrongFormat) {
+            this.filesWrongFormat = filesWrongFormat;
+        }
+
+        public String getFilesCurrentRow() {
+            return filesCurrentRow;
+        }
+
+        public void setFilesCurrentRow(String filesCurrentRow) {
+            this.filesCurrentRow = filesCurrentRow;
         }
 
         public String getFilesGeneratedSuccess() {
