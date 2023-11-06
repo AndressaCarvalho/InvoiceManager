@@ -88,15 +88,15 @@ public class GeneratorService implements IGeneratorService {
                 System.out.println(fileMessageConfiguration.getFilesCurrentRow() + rowNumber);
 
                 if (!row.isEmpty() && rowNumber != 1) {
-                    String[] records = row.split(";");
+                    String[] records = row.split(";(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)(?=(?:[^\']*\'[^\']*\'\'*)*[^\']*$)");
 
                     if (isValidZipCode(records[1])) {
                         isDataToFileFound = true;
 
-                        String nameCustomer = records[0].trim();
-                        String completeAddress = records[2].trim() + " - " + records[1].trim() + " - " + records[3].trim() + " - " + records[4].trim() + " - " + records[5].trim();
-                        double invoiceValue = Double.parseDouble(records[6].trim().replaceAll(",", "."));
-                        int numberOfPages = formatNumberOfPages(Integer.parseInt(records[7].trim()));
+                        String nameCustomer = records[0].trim().replaceAll("[\"']", "");
+                        String completeAddress = records[2].trim().replaceAll("[\"']", "") + " - " + records[1].trim().replaceAll("[\"']", "") + " - " + records[3].trim().replaceAll("[\"']", "") + " - " + records[4].trim().replaceAll("[\"']", "") + " - " + records[5].trim().replaceAll("[\"']", "");
+                        double invoiceValue = Double.parseDouble(records[6].trim().replaceAll("[\"']", "").replaceAll(",", "."));
+                        int numberOfPages = formatNumberOfPages(Integer.parseInt(records[7].trim().replaceAll("[\"']", "")));
 
                         InvoiceModel newInvoice = invoiceService.create(
                                 nameCustomer,
@@ -110,8 +110,6 @@ public class GeneratorService implements IGeneratorService {
                         else {
                             if (isNumberPageLessThanOrEqualToSix(numberOfPages)) {
                                 listInvoicesWithNumberPageLessThanOrEqualToSix.add(newInvoice);
-
-                                listInvoicesWithNumberPageLessThanOrEqualToTwelve.add(newInvoice);
                             }
                             else if (isNumberPageLessThanOrEqualToTwelve(numberOfPages))
                                 listInvoicesWithNumberPageLessThanOrEqualToTwelve.add(newInvoice);
@@ -192,7 +190,7 @@ public class GeneratorService implements IGeneratorService {
     }
 
     private Boolean isValidZipCode(String zipCode) {
-        zipCode = zipCode.trim();
+        zipCode = zipCode.trim().replaceAll("[\"']", "");
 
         if (zipCode.matches("[0-9]+")) {
             int zipCodeLength = zipCode.length();
