@@ -16,7 +16,7 @@ Assim, dentre as linguagens de programação que atendem os dois primeiros requi
 
 Após a escolha da linguagem, a próxima etapa foi a seleção de um framework, para que o projeto fosse devidamente estruturado. Isto foi feito através dos critérios: 
 - O framework deve ser um dos mais utilizados para Java no mercado;
-- O framework deve ter suporte ao Shell (frequentemente usado em conjunto com o CLI), para que o usuário possa interajir com o sistema operacional, por meio de comandos de texto interpretados por este.
+- O framework deve ter suporte ao Shell (frequentemente usado em conjunto com a CLI), para que o usuário possa interajir com o sistema operacional, por meio de comandos de texto interpretados por este.
 - O framework deve ser conhecido pelo desenvolvedor, para agilizar o tempo de desenvolvimento da aplicação.
 
 Por fim, o framework selecionado foi o Spring, que possui suporte ao Shell, por meio do Spring Shell.
@@ -62,7 +62,7 @@ Por fim, o framework selecionado foi o Spring, que possui suporte ao Shell, por 
 - [x] Leitura de arquivos de entrada em formato TXT;
 - [x] Validação de CEP's relacionados às faturas (devem ser numéricos, não podem estar zerados, e devem ter o tamanho maior ou igual a sete, e menor ou igual a oito);
 - [x] Conversão do número de páginas das faturas em par;
-- [x] Divisão do arquivo TXT de origem em arquivos CSV, baseada no valor da fatura (arquivo separado para valor igual à R$ 0,00) e número de páginas das faturas (separação por número menor ou igual à seis, menor ou igual à doze, e maior que doze).
+- [x] Divisão do arquivo TXT de origem em arquivos CSV, baseada no valor da fatura (arquivo separado para valor igual à R$ 0,00) e número de páginas das faturas (separação por número menor ou igual à seis, maior que seis e menor ou igual à doze, e maior que doze).
 
 ---
 
